@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Usuario y Asignar Privilegios</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 mt-5">
+                <h2 class="mb-4">Crear Usuario</h2>
+                <form action="procesar_formulario.php" method="POST">
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" name="usuario" id="usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contrasena" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="contrasena" id="contrasena">
+                    </div>
+                    <div class="mb-3">
+                        <label for="privilegios" class="form-label">Privilegios</label>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="privilegios[]" value="Crear">
+                            <label class="form-check-label">Crear</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="privilegios[]" value="Leer">
+                            <label class="form-check-label">Leer</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="privilegios[]" value="Actualizar">
+                            <label class="form-check-label">Actualizar</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="privilegios[]" value="Borrar">
+                            <label class="form-check-label">Borrar</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Crear Usuario</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
